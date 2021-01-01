@@ -736,12 +736,13 @@ it supports the following arguments:
 
 ## To-dos (Highest priority)
 
-1.  Switch from IMF i18n to [intl-dom](https://github.com/brettz9/intl-dom) and
-    as needed [i18nizeElement](https://github.com/brettz9/i18nizeElement)
-1.  Simplify `languages.json` by using `Intl.DisplayNames` (`type: 'language'`)
-    to localize language names (and can avoid direction if [intl-locale-info proposal](https://github.com/tc39/proposal-intl-locale-info) is
-    implemented); consider using with plugins so can, e.g., show language
-    visibly into which a targeted content language field was translated
+1.  Waiting: Avoid `rtl-detect` if
+    [intl-locale-info proposal](https://github.com/tc39/proposal-intl-locale-info)
+    gets implemented)
+1.  [`navigator.storage.estimate`](https://developers.google.com/web/updates/2017/08/estimating-available-storage-space)
+1.  Consider using `Intl.DisplayNames` (`type: 'language'`) plugins so can,
+    e.g., show language visibly into which a targeted content language field
+    was translated?
 1.  Document and add screen-casts along with one for developers showing
     JSON format, metadata, and schemas); also use with shortcuts (including
     Bahá'í Library Online ones)
@@ -1095,8 +1096,13 @@ it supports the following arguments:
 
 ## To-dos (Lower priority)
 
-1.  Waiting: Avoid superagent warning:
-    <https://github.com/whitlockjc/path-loader/issues/17>
+1.  Use or publish [rollup-plugin-postprocess](git+https://github.com/brettz9/rollup-plugin-postprocess.git#update)
+    as stable version
+1.  Check if still getting superagent warning:
+    <https://github.com/whitlockjc/path-loader/issues/17> (if `json-refs` can
+    be updated to stable version)
+1.  Use [i18nizeElement](https://github.com/brettz9/i18nizeElement)? (probably
+    not as need RTL detection for more than setting on element)
 1.  Remember columns enabled, etc. since last visit, and/or saved as
     preferences.
 1.  Allow copy-pasting a search as a custom web protocol (make

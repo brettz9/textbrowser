@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import {getJSON} from 'simple-get-json';
-import {IMF} from 'imf';
+import {IMF} from 'intl-dom';
 import loadStylesheets from 'load-stylesheets';
 import {serialize as formSerialize} from 'form-serialization';
 

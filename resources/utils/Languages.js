@@ -24,11 +24,13 @@ export class Languages {
   constructor ({langData}) {
     this.langData = langData;
   }
-  localeFromLangData (lan) {
-    return this.langData['localization-strings'][lan];
+  localeFromLangData (langCode) {
+    return this.langData['localization-strings'][langCode];
   }
   getLanguageFromCode (code) {
     return this.localeFromLangData(code).languages[code];
+    // Could add something like this in place or as fallback, though need to pass in locale
+    // || new Intl.DisplayNames([locale], {type: 'language'}).of(code);
   }
   getFieldNameFromPluginNameAndLocales ({
     pluginName, locales, lf, targetLanguage, applicableFieldI18N, meta, metaApplicableField
